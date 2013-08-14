@@ -5,40 +5,44 @@
 <!--[if (IE 8)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
 <!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
 
-	<head>
-		<meta charset="utf-8">
+<head>
+	<meta charset="utf-8">
 
-		<!-- Google Chrome Frame for IE -->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- Google Chrome Frame for IE -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-		<title><?php wp_title(''); ?></title>
+	<title><?php wp_title(''); ?></title>
 
-		<!-- mobile meta (hooray!) -->
-		<meta name="HandheldFriendly" content="True">
-		<meta name="MobileOptimized" content="320">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<!-- mobile meta (hooray!) -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-		<!-- icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) -->
-		<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-icon-touch.png">
-		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
+	<!-- icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) -->
+	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/library/images/apple-icon-touch.png">
+	<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
 		<!--[if IE]>
 			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
-		<![endif]-->
-		<!-- or, set /favicon.ico for IE10 win -->
-		<meta name="msapplication-TileColor" content="#f01d4f">
-		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
+			<![endif]-->
+			<!-- or, set /favicon.ico for IE10 win -->
+			<meta name="msapplication-TileColor" content="#f01d4f">
+			<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
 
-		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+			<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
-		<!-- wordpress head functions -->
-		<?php wp_head(); ?>
-		<!-- end of wordpress head -->
+			<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,700,600' rel='stylesheet' type='text/css'>
 
-		<!-- drop Google Analytics Here -->
-		<!-- end analytics -->
 
-	</head>
+			<!-- wordpress head functions -->
+			<?php wp_head(); ?>
+			<!-- end of wordpress head -->
 
-	<body <?php body_class(); ?>>
+			<!-- drop Google Analytics Here -->
+			<!-- end analytics -->
 
-		<div id="container">
+		</head>
+
+		<body <?php body_class(); ?>>
+
+			<div id="container">
+				<div class="hashtag"><i class="icon-twitter"></i><a href="https://twitter.com/search?q=%23whyarethelightsonnl">#whyarethelightsonnl</a></div>
