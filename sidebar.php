@@ -2,10 +2,10 @@
 
 	<header class="header" role="banner">
 
-		<div id="inner-header" class="wrap clearfix">
+		<div id="inner-header" class="clearfix">
 
 			<!-- to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> -->
-			<div class="logo"><img src="<?php echo get_template_directory_uri();?>/library/images/lightbulb@2x.png"></div>
+			<div class="logo"><i class="icon-lightbulb"></i></div>
 			<p class="site-title h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
 
 			<!-- if you'd like to use the site description you can un-comment it below -->

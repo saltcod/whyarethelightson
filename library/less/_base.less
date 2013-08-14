@@ -24,18 +24,10 @@ and will be used across all viewports.
 11. COMMENT FORM STYLES
 12. SIDEBARS & ASIDES
 13. FOOTER STYLES
+14. GRAVITY FORMS
 
 ******************************************************************/
 
-
-
-
-/*********************
-00. VARIABLES
-*********************/
-
-
-@sans: "Open Sans", "Proxima Nova", Helvetica, sans-serif;
 
 /*********************
 01. GENERAL STYLES
@@ -45,10 +37,10 @@ html, body {
 	/* height: 100%; */
 }
 body {
-	font-family: @serif;
+	font-family: @sans-serif;
 	font-size: 100%;
 	line-height: 1.5;
-	color: #565656;
+	color: #fff;
 	background: url(../images/green-dots-bg.png) repeat;
 }
 
@@ -138,7 +130,7 @@ a, a:visited {
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 	font-family: @sans-serif;
 	text-rendering: optimizelegibility;
-	font-weight: 400;
+	font-weight: 100;
 	/*
 	if you're going to use webfonts, be sure to check your weights
 	http://css-tricks.com/watch-your-font-weight/
@@ -151,7 +143,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 }
 
 h1, .h1 {
-	font-size: 2.5em;
+	font-size: 4em;
 	line-height: 1.333em;
 }
 
@@ -187,6 +179,9 @@ h5, .h5 {
 
 	.logo {
 		text-align: center;
+		color: white;
+		font-size: 40px;
+		text-shadow: 2px 2px 15px @yellow;
 
 		img {
 			width: 45px;
@@ -207,6 +202,16 @@ h5, .h5 {
 	}
 }
 
+
+.hashtag {
+	background: lighten(@green, 5%);
+	padding: 12px 10px 12px 0;
+	text-align: center;
+	color: white;
+	i { margin-right: 135px; background: lighten(@green, 15%); padding: 15px}
+}
+
+
 /*********************
 07. NAVIGATION STYLES
 *********************/
@@ -222,7 +227,7 @@ and more scalable.
 .nav {
 	border-bottom: 0;
 	text-transform: uppercase;
-	font-family: @sans;
+	font-family: @sans-serif;
 
 	li {
 		display: block;
@@ -233,7 +238,7 @@ and more scalable.
 			display: block;
 			text-decoration: none;
 			padding: 10px 10px;
- 
+
 			/*
 			remember this is for mobile ONLY, so there's no need
 			to even declare hover styles here, you can do it in
@@ -241,7 +246,7 @@ and more scalable.
 			keep this file as small as possible!
 			*/
 			&:hover, &:focus {
-
+				background: darken(@dark-blue, 1%);
 			}
 		}
 
@@ -265,7 +270,9 @@ and more scalable.
 					padding-left: 30px;
 
 					&:hover,
-					&:focus {}
+					&:focus {
+
+					}
 
 					&:link {}
 
@@ -285,7 +292,7 @@ and more scalable.
 		li.current-menu-item,
 		li.current_page_item,
 		li.current_page_ancestor {
-
+			background: darken(@dark-blue, 5%);
 			a {}
 
 			}  /* end current highlighters */
@@ -300,7 +307,9 @@ and more scalable.
 #content {
 	margin-top: 2.2em;
 
-	#inner-content {}
+	#inner-content {
+		margin-top: 75px;
+	}
 }
 
 .hentry {
@@ -317,7 +326,19 @@ and more scalable.
 	.single-title {}
 
 	.page-title {}
+	.post-title { 
+		font-size: 3em;
+		position: absolute;
+		top: 0;
+		left: 5px;
+	}
 
+	article { 
+		position: relative;
+		padding: 25px; 
+		margin-bottom: 25px; 
+		border-bottom: 1px solid #fff;
+	} 
 	.archive-title { }
 
 	/* want to style individual post classes? Booya! */
@@ -330,6 +351,9 @@ and more scalable.
 	.category-slug {}   /* style by category (i.e. category-videos) */
 	.tag-slug {}        /* style by tag (i.e. tag-news) */
 
+	
+
+
 	/* post meta */
 	.byline {
 		color: #999;
@@ -339,9 +363,17 @@ and more scalable.
 
 	/* entry content */
 	.entry-content {
+		position: relative;
 
+		body.page &{  
+			background: white; 
+			color: #555; 
+			padding: 10px 25px; 
+		}
+		
 		p {}
 
+		img.wp-post-image {   }
 
 		ul, ol, table, dl {}
 
@@ -411,8 +443,10 @@ and more scalable.
 
 			.wp-caption {
 				max-width: 100%;
-				background: #eee;
 				padding: 5px;
+				display: block;
+
+
 
 				/* images inside wp-caption */
 				img {
@@ -588,7 +622,7 @@ and more scalable.
 
 
 .commentlist {
-
+	color: #444;
 	li {
 		position: relative;
 		clear: both;
@@ -614,6 +648,7 @@ and more scalable.
 			.depth-1 {}           /* change number for different depth */
 			.byuser {}
 			.bypostauthor {}
+			.comment-author { color: green;}
 			.comment-author-admin {}
 
 			} /* end .commentlist li ul.children */
@@ -848,6 +883,7 @@ and more scalable.
 	font: 1em Archer;  
 	padding-bottom: 50px;
 	text-shadow: 2px 2px 15px yellow;
+	a:hover { text-shadow: 2px 2px 25px lighten(@yellow, 5%); }
  }
 
 .site-description{ 
@@ -923,3 +959,8 @@ and more scalable.
 
 		.copyright {}
 
+/***********************
+13. GRAVITY FORMS STYLES
+***********************/
+
+.gfield { margin-bottom: 35px; }

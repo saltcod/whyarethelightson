@@ -17,6 +17,7 @@ sidebars, comments, ect.
  * @since 0.1
  */
 
+
 function waterstreet_show_template() {
 	if ( is_super_admin() ){
 		global $template;
@@ -28,6 +29,22 @@ add_action('wp_footer', 'waterstreet_show_template');
 
 
 
+/**
+ * Get caption for Featured Images 
+ *
+ * @since 0.1
+ */
+
+function whylights_the_post_thumbnail_caption() {
+  global $post;
+
+  $thumbnail_id    = get_post_thumbnail_id($post->ID);
+  $thumbnail_image = get_posts(array('p' => $thumbnail_id, 'post_type' => 'attachment'));
+
+  if ($thumbnail_image && isset($thumbnail_image[0])) {
+    echo '<span class=wp-caption>'.$thumbnail_image[0]->post_excerpt.'</span>';
+  }
+}
 
 
 
@@ -56,8 +73,7 @@ require_once('library/bones.php'); // if you remove this, bones will break
 	- example custom taxonomy (like categories)
 	- example custom taxonomy (like tags)
 */
-require_once('library/custom-post-type.php'); // you can disable this if you like
-/*
+ /*
 3. library/admin.php
 	- removing some default WordPress dashboard widgets
 	- an example custom dashboard widget

@@ -58,12 +58,13 @@ http://0to255.com/
 
 @dark-blue: #2A2F31;
 @pink: #F355B3;
+@yellow: #E2E238;
 
 
 @black:             #000;
 @white:             #fff;
+@green:             #19946F;
 
-@bones-pink:        #f01d4f;
 @bones-blue:        #1990db;
 
 @link-color:        @white;
@@ -80,8 +81,8 @@ http://sachagreif.com/sass-color-variables/
 TYPOGRAPHY
 *********************/
 
-@sans-serif:         "Helvetica Neue", Helvetica, Arial, sans-serif; 
-@serif:              "Georgia", Cambria, Times New Roman, Times, serif; 
+@sans-serif: 		"Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+@serif:             "Georgia", Cambria, Times New Roman, Times, serif; 
 
 
 /* 	To embed your own fonts, use this syntax
@@ -219,9 +220,9 @@ BUTTONS
 *********************/
 
 .button, .button:visited {
-	border: 1px solid darken(@bones-pink, 13%);
-	border-top-color: darken(@bones-pink, 7%);
-	border-left-color: darken(@bones-pink, 7%);
+	border: 1px solid darken(@green, 13%);
+	border-top-color: darken(@green, 7%);
+	border-left-color: darken(@green, 7%);
 	padding: 4px 12px;
 	color: @white;
 	display: inline-block;
@@ -234,18 +235,18 @@ BUTTONS
 	line-height: 21px;
 	.transition();
 	.border-radius(4px);
-	.css-gradient(@bones-pink,darken(@bones-pink, 5%));
+	.css-gradient(@green,darken(@green, 5%));
 
 	&:hover, &:focus {
 		color: @white;
-	  border: 1px solid darken(@bones-pink, 13%);
-	  border-top-color: darken(@bones-pink, 20%);
-	 	border-left-color: darken(@bones-pink, 20%);
-		.css-gradient(darken(@bones-pink, 5%),darken(@bones-pink, 10%));
+	  border: 1px solid darken(@green, 13%);
+	  border-top-color: darken(@green, 20%);
+	 	border-left-color: darken(@green, 20%);
+		.css-gradient(darken(@green, 5%),darken(@green, 10%));
 	}
 	
 	&:active {
-		.css-gradient(darken(@bones-pink, 5%),@bones-pink);
+		.css-gradient(darken(@green, 5%),@green);
 	}	
 }
 
@@ -253,14 +254,14 @@ BUTTONS
 	border-color: darken(@bones-blue, 10%);
 	text-shadow: 0 1px 1px darken(@bones-blue, 10%);
 	.css-gradient( @bones-blue, darken(@bones-blue, 5%) );
-	-webkit-box-shadow: inset 0 0 3px lighten(@bones-blue, 16%);
-       -moz-box-shadow: inset 0 0 3px lighten(@bones-blue, 16%);
-   	        box-shadow: inset 0 0 3px lighten(@bones-blue, 16%);
+	-webkit-box-shadow: inset 0 0 3px lighten(@green, 16%);
+       -moz-box-shadow: inset 0 0 3px lighten(@green, 16%);
+   	        box-shadow: inset 0 0 3px lighten(@green, 16%);
 	&:hover, &:focus {
-		border-color: darken(@bones-blue, 15%);
-		.css-gradient( darken(@bones-blue, 4%), darken(@bones-blue, 10%) );
+		border-color: darken(@green, 15%);
+		.css-gradient( darken(@green, 4%), darken(@green, 10%) );
 	}
 	&:active {
-		.css-gradient( darken(@bones-blue, 5%), @bones-blue );
+		.css-gradient( darken(@green, 5%), @green );
 	}
 }
