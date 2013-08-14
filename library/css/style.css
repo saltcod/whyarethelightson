@@ -1337,6 +1337,7 @@ and more scalable.
   text-align: center;
   font: 1em Archer;
   padding-bottom: 50px;
+  text-shadow: 2px 2px 15px yellow;
 }
 .site-description {
   color: white;
