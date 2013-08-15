@@ -41,7 +41,10 @@ body {
 	font-size: 100%;
 	line-height: 1.5;
 	color: #fff;
-	background: url(../images/green-dots-bg.png) repeat;
+	background-color:@green;
+	background-image: radial-gradient(#ffffff 1%, transparent 1%), radial-gradient(#ffffff 1%, transparent 1%);
+	background-size:30px 30px;
+	background-position: 0 0, 30px 30px;
 }
 
 /********************
@@ -232,12 +235,14 @@ and more scalable.
 	li {
 		display: block;
 		text-align: center;
+
 		&.post-a-photo a { color: @pink; &:hover { color: darken(@pink, 10%); } }
 
 		a {
 			display: block;
 			text-decoration: none;
 			padding: 10px 10px;
+			.transition(all,.3s);
 
 			/*
 			remember this is for mobile ONLY, so there's no need
@@ -246,7 +251,7 @@ and more scalable.
 			keep this file as small as possible!
 			*/
 			&:hover, &:focus {
-				background: darken(@dark-blue, 1%);
+				background: darken(@dark-blue, 2%);
 			}
 		}
 
@@ -292,7 +297,7 @@ and more scalable.
 		li.current-menu-item,
 		li.current_page_item,
 		li.current_page_ancestor {
-			background: darken(@dark-blue, 5%);
+			background: darken(@dark-blue, 3%);
 			a {}
 
 			}  /* end current highlighters */
@@ -883,8 +888,9 @@ and more scalable.
 	font: 1em Archer;  
 	padding-bottom: 50px;
 	text-shadow: 2px 2px 15px yellow;
+	.transition(all,.3s);
 	a:hover { text-shadow: 2px 2px 25px lighten(@yellow, 5%); }
- }
+}
 
 .site-description{ 
 	color: white;

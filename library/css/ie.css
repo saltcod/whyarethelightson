@@ -536,7 +536,7 @@ HEADER
 *********************/
 .hashtag {
   position: absolute;
-  padding: 5px 10px 5px 0;
+  padding: 5px 20px 5px 0;
   top: 50px;
   right: 50px;
   color: white;
@@ -563,6 +563,7 @@ SIDEBARS & ASIDES
   position: fixed;
   top: 0;
   bottom: 0;
+  box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.4);
 }
 .widgettitle {
   border-bottom: 2px solid #444;

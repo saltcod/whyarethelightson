@@ -31,6 +31,4 @@
 
 <?php endif; ?>
 
-#whyarethelightson
-
 </div>

@@ -790,7 +790,10 @@ body {
   font-size: 100%;
   line-height: 1.5;
   color: #fff;
-  background: url(../images/green-dots-bg.png) repeat;
+  background-color: #19946f;
+  background-image: radial-gradient(#ffffff 1%, transparent 1%), radial-gradient(#ffffff 1%, transparent 1%);
+  background-size: 30px 30px;
+  background-position: 0 0, 30px 30px;
 }
 /********************
 02. WORDPRESS BODY CLASSES
@@ -999,6 +1002,11 @@ and more scalable.
   display: block;
   text-decoration: none;
   padding: 10px 10px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   /*
 			remember this is for mobile ONLY, so there's no need
 			to even declare hover styles here, you can do it in
@@ -1009,7 +1017,7 @@ and more scalable.
 }
 .nav li a:hover,
 .nav li a:focus {
-  background: #282c2e;
+  background: #252a2c;
 }
 .nav li ul.sub-menu li a,
 .nav li ul.children li a {
@@ -1018,7 +1026,7 @@ and more scalable.
 .nav li.current-menu-item,
 .nav li.current_page_item,
 .nav li.current_page_ancestor {
-  background: #1e2223;
+  background: #232729;
 }
 /* end .nav */
 /*********************
@@ -1392,6 +1400,11 @@ body.page .entry-content {
   font: 1em Archer;
   padding-bottom: 50px;
   text-shadow: 2px 2px 15px yellow;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .site-title a:hover {
   text-shadow: 2px 2px 25px #e5e54e;
@@ -1718,7 +1731,7 @@ you can add resource intensive styles.
   *********************/
   .hashtag {
     position: absolute;
-    padding: 5px 10px 5px 0;
+    padding: 5px 20px 5px 0;
     top: 50px;
     right: 50px;
     color: white;
@@ -1745,6 +1758,7 @@ you can add resource intensive styles.
     position: fixed;
     top: 0;
     bottom: 0;
+    box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.4);
   }
   .widgettitle {
     border-bottom: 2px solid #444;
