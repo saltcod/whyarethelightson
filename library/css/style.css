@@ -791,7 +791,7 @@ body {
   line-height: 1.5;
   color: #fff;
   background-color: #19946f;
-  background-image: radial-gradient(#ffffff 1%, transparent 1%), radial-gradient(#ffffff 1%, transparent 1%);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.17) 4%, transparent 4%), radial-gradient(rgba(255, 255, 255, 0.17) 4%, transparent 4%);
   background-size: 30px 30px;
   background-position: 0 0, 30px 30px;
 }
